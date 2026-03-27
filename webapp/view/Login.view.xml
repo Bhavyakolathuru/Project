@@ -1,0 +1,37 @@
+<mvc:View
+    controllerName="project1.controller.Login"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page class="loginPage" showHeader="false">
+        <content>
+            <VBox class="loginContainer" alignItems="Center" justifyContent="Center">
+
+                <VBox class="loginBox">
+
+                    <Title text="Login" level="H2" class="loginTitle"/>
+
+                    <Input 
+                        id="username"
+                        class="loginInput"
+                        placeholder="Enter Username" />
+
+                    <Input 
+                        id="password"
+                        class="loginInput"
+                        type="Password"
+                        placeholder="Enter Password" />
+
+                    <Button 
+                        text="Login"
+                        class="loginButton"
+                        press="onLoginPress"
+                        type="Emphasized" />
+
+                </VBox>
+
+            </VBox>
+        </content>
+    </Page>
+
+</mvc:View>

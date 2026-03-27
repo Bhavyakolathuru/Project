@@ -1,0 +1,49 @@
+/* Background Image */
+.loginPage {
+    height: 100%;
+    background-image:url(../images/login_bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* Center container */
+.loginContainer {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Login box (glass effect style) */
+.loginBox {
+    width: 320px;
+    padding: 30px;
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.85); /* transparent white */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+
+    text-align: center;
+}
+
+/* Title */
+.loginTitle {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Inputs */
+.loginInput {
+    margin-bottom: 15px;
+}
+
+/* Button */
+.loginButton {
+    margin-top: 10px;
+    width: 100%;
+}
+
+/* Optional: Hover effect for button */
+.loginButton:hover {
+    opacity: 0.9;
+}

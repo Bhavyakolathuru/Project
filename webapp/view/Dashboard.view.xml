@@ -1,0 +1,78 @@
+<mvc:View
+    controllerName="project1.controller.Dashboard"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page title="Student Dashboard" class="dashboardPage">
+
+        <content>
+
+            <!-- Buttons -->
+            <HBox class="buttonBar">
+                <Button text="Create" press="onCreate"/>
+                <Button text="Edit" press="onEdit"/>
+                <Button text="Delete" press="onDelete"/>
+            </HBox>
+
+            <!-- Table -->
+            <Table 
+                id="studentTable"
+                mode="SingleSelectLeft"
+                items="{/students}">
+
+                <columns>
+                    <Column><Text text="ID"/></Column>
+                    <Column><Text text="Name"/></Column>
+                    <Column><Text text="Course"/></Column>
+                </columns>
+
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{id}"/>
+                            <Text text="{name}"/>
+                            <Text text="{course}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+
+            </Table>
+
+        </content>
+
+        <!-- CREATE Dialog -->
+        <Dialog id="createDialog" title="Create Student">
+            <VBox class="sapUiSmallMargin">
+                <Input id="createId" placeholder="ID"/>
+                <Input id="createName" placeholder="Name"/>
+                <Input id="createCourse" placeholder="Course"/>
+            </VBox>
+
+            <beginButton>
+                <Button text="Save" press="onSaveCreate"/>
+            </beginButton>
+
+            <endButton>
+                <Button text="Cancel" press="onCancelCreate"/>
+            </endButton>
+        </Dialog>
+
+        <!-- EDIT Dialog -->
+        <Dialog id="editDialog" title="Edit Student">
+            <VBox class="sapUiSmallMargin">
+                <Input id="editName" placeholder="Name"/>
+                <Input id="editCourse" placeholder="Course"/>
+            </VBox>
+
+            <beginButton>
+                <Button text="Save" press="onSaveEdit"/>
+            </beginButton>
+
+            <endButton>
+                <Button text="Cancel" press="onCancelEdit"/>
+            </endButton>
+        </Dialog>
+
+    </Page>
+
+</mvc:View>
