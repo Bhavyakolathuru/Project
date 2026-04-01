@@ -3,47 +3,39 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
 
-    <Page class="loginPage" showHeader="false">
+    <Page showHeader="false">
+
+        <!-- Header -->
+        <headerContent>
+            <Toolbar>
+                <Title text="My Company Portal" level="H2"/>
+            </Toolbar>
+        </headerContent>
+
         <content>
-
             <VBox class="loginContainer" alignItems="Center" justifyContent="Center">
-
-                <!-- 🔹 Logo Image -->
-                <Image 
-                    src="/images/login_bg.jpg"
-                    width="350px"
-                    class="loginImage" />
-
-                <!-- 🔹 Login Box -->
+                <!-- Logo Image -->
+                <Image src="/images/login_bg.jpg" width="350px" class="loginImage" />
+                
+                <!-- Login Box -->
                 <VBox class="loginBox" width="300px">
-
                     <Title text="Login" level="H2" class="loginTitle"/>
-
                     <Label text="Username" />
-                    <Input 
-                        id="username"
-                        class="loginInput"
-                        placeholder="Enter Username" />
-
+                    <Input id="username" class="loginInput" placeholder="Enter Username" />
                     <Label text="Password" />
-                    <Input 
-                        id="password"
-                        class="loginInput"
-                        type="Password"
-                        placeholder="Enter Password" />
-
-                    <Button 
-                        text="Login"
-                        width="100%"
-                        class="loginButton"
-                        press="onLoginPress"
-                        type="Emphasized" />
-
+                    <Input id="password" class="loginInput" type="Password" placeholder="Enter Password" />
+                    <Button text="Login" width="100%" class="loginButton" press="onLoginPress" type="Emphasized" />
                 </VBox>
-
             </VBox>
-
         </content>
+
+        <!-- Footer -->
+        <footer>
+            <Toolbar>
+                <Title text="Next IT point" level="H4" textAlign="Center"/>
+            </Toolbar>
+        </footer>
+
     </Page>
 
 </mvc:View>

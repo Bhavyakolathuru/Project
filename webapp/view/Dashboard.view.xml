@@ -5,12 +5,18 @@
     xmlns:core="sap.ui.core">
 
     <Page title="Employee Details">
-        <content>
 
+        <!-- Header -->
+        <headerContent>
+            <Toolbar>
+                <Title text="Employee Portal" level="H2"/>
+            </Toolbar>
+        </headerContent>
+
+        <content>
             <VBox class="empContainer" alignItems="Center" justifyContent="Center">
 
                 <VBox class="empBox">
-
                     <Title text="Employee Form" level="H2" class="empTitle"/>
 
                     <!-- Name -->
@@ -49,20 +55,23 @@
                         </Select>
                     </HBox>
 
-                    <!-- Button -->
+                    <!-- Buttons -->
                     <HBox justifyContent="Center">
-                        <Button 
-                            text="Submit"
-                            type="Emphasized"
-                            class="empButton"
-                            press="onSubmit" />
+                        <Button text="Submit" type="Emphasized" class="empButton" press="onSubmit"/>
                     </HBox>
 
                 </VBox>
 
             </VBox>
-
         </content>
+
+        <!-- Footer -->
+        <footer>
+            <Toolbar>
+                <Title text="Next IT Point" level="H4" textAlign="Center"/>
+            </Toolbar>
+        </footer>
+
     </Page>
 
 </mvc:View>
