@@ -14,37 +14,49 @@
                     <Title text="Employee Form" level="H2" class="empTitle"/>
 
                     <!-- Name -->
-                    <Label text="Employee Name" />
-                    <Input id="empName" placeholder="Enter name" class="empInput"/>
+                    <HBox class="empRow" alignItems="Center">
+                        <Label text="Employee Name" width="140px"/>
+                        <Input id="empName" placeholder="Enter name" width="220px"/>
+                    </HBox>
 
                     <!-- ID -->
-                    <Label text="Employee ID" />
-                    <Input id="empId" placeholder="Enter ID" class="empInput"/>
+                    <HBox class="empRow" alignItems="Center">
+                        <Label text="Employee ID" width="140px"/>
+                        <Input id="empId" placeholder="Enter ID" width="220px"/>
+                    </HBox>
 
                     <!-- Phone -->
-                    <Label text="Phone Number" />
-                    <Input id="empPhone" type="Tel" placeholder="Enter phone" class="empInput"/>
+                    <HBox class="empRow" alignItems="Center">
+                        <Label text="Phone Number" width="140px"/>
+                        <Input id="empPhone" type="Tel" placeholder="Enter phone" width="220px"/>
+                    </HBox>
 
                     <!-- Email -->
-                    <Label text="Email" />
-                    <Input id="empEmail" type="Email" placeholder="Enter email" class="empInput"/>
+                    <HBox class="empRow" alignItems="Center">
+                        <Label text="Email" width="140px"/>
+                        <Input id="empEmail" type="Email" placeholder="Enter email" width="220px"/>
+                    </HBox>
 
                     <!-- Department -->
-                    <Label text="Department" />
-                    <Select id="empDept" class="empInput">
-                        <items>
-                            <core:Item key="HR" text="HR"/>
-                            <core:Item key="IT" text="IT"/>
-                            <core:Item key="Finance" text="Finance"/>
-                        </items>
-                    </Select>
+                    <HBox class="empRow" alignItems="Center">
+                        <Label text="Department" width="140px"/>
+                        <Select id="empDept" width="220px">
+                            <items>
+                                <core:Item key="HR" text="HR"/>
+                                <core:Item key="IT" text="IT"/>
+                                <core:Item key="Finance" text="Finance"/>
+                            </items>
+                        </Select>
+                    </HBox>
 
-                    <!-- Submit -->
-                    <Button 
-                        text="Submit"
-                        type="Emphasized"
-                        class="empButton"
-                        press="onSubmit" />
+                    <!-- Button -->
+                    <HBox justifyContent="Center">
+                        <Button 
+                            text="Submit"
+                            type="Emphasized"
+                            class="empButton"
+                            press="onSubmit" />
+                    </HBox>
 
                 </VBox>
 
