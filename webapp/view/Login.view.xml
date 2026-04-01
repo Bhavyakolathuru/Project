@@ -5,17 +5,27 @@
 
     <Page class="loginPage" showHeader="false">
         <content>
+
             <VBox class="loginContainer" alignItems="Center" justifyContent="Center">
 
-                <VBox class="loginBox">
+                <!-- 🔹 Logo Image -->
+                <Image 
+                    src="/images/login_bg.jpg"
+                    width="350px"
+                    class="loginImage" />
+
+                <!-- 🔹 Login Box -->
+                <VBox class="loginBox" width="300px">
 
                     <Title text="Login" level="H2" class="loginTitle"/>
 
+                    <Label text="Username" />
                     <Input 
                         id="username"
                         class="loginInput"
                         placeholder="Enter Username" />
 
+                    <Label text="Password" />
                     <Input 
                         id="password"
                         class="loginInput"
@@ -24,6 +34,7 @@
 
                     <Button 
                         text="Login"
+                        width="100%"
                         class="loginButton"
                         press="onLoginPress"
                         type="Emphasized" />
@@ -31,6 +42,7 @@
                 </VBox>
 
             </VBox>
+
         </content>
     </Page>
 

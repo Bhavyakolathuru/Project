@@ -1,78 +1,56 @@
 <mvc:View
     controllerName="project1.controller.Dashboard"
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
 
-    <Page title="Student Dashboard" class="dashboardPage">
-
+    <Page title="Employee Details">
         <content>
 
-            <!-- Buttons -->
-            <HBox class="buttonBar">
-                <Button text="Create" press="onCreate"/>
-                <Button text="Edit" press="onEdit"/>
-                <Button text="Delete" press="onDelete"/>
-            </HBox>
+            <VBox class="empContainer" alignItems="Center" justifyContent="Center">
 
-            <!-- Table -->
-            <Table 
-                id="studentTable"
-                mode="SingleSelectLeft"
-                items="{/students}">
+                <VBox class="empBox">
 
-                <columns>
-                    <Column><Text text="ID"/></Column>
-                    <Column><Text text="Name"/></Column>
-                    <Column><Text text="Course"/></Column>
-                </columns>
+                    <Title text="Employee Form" level="H2" class="empTitle"/>
 
-                <items>
-                    <ColumnListItem>
-                        <cells>
-                            <Text text="{id}"/>
-                            <Text text="{name}"/>
-                            <Text text="{course}"/>
-                        </cells>
-                    </ColumnListItem>
-                </items>
+                    <!-- Name -->
+                    <Label text="Employee Name" />
+                    <Input id="empName" placeholder="Enter name" class="empInput"/>
 
-            </Table>
+                    <!-- ID -->
+                    <Label text="Employee ID" />
+                    <Input id="empId" placeholder="Enter ID" class="empInput"/>
+
+                    <!-- Phone -->
+                    <Label text="Phone Number" />
+                    <Input id="empPhone" type="Tel" placeholder="Enter phone" class="empInput"/>
+
+                    <!-- Email -->
+                    <Label text="Email" />
+                    <Input id="empEmail" type="Email" placeholder="Enter email" class="empInput"/>
+
+                    <!-- Department -->
+                    <Label text="Department" />
+                    <Select id="empDept" class="empInput">
+                        <items>
+                            <core:Item key="HR" text="HR"/>
+                            <core:Item key="IT" text="IT"/>
+                            <core:Item key="Finance" text="Finance"/>
+                        </items>
+                    </Select>
+
+                    <!-- Submit -->
+                    <Button 
+                        text="Submit"
+                        type="Emphasized"
+                        class="empButton"
+                        press="onSubmit" />
+
+                </VBox>
+
+            </VBox>
 
         </content>
-
-        <!-- CREATE Dialog -->
-        <Dialog id="createDialog" title="Create Student">
-            <VBox class="sapUiSmallMargin">
-                <Input id="createId" placeholder="ID"/>
-                <Input id="createName" placeholder="Name"/>
-                <Input id="createCourse" placeholder="Course"/>
-            </VBox>
-
-            <beginButton>
-                <Button text="Save" press="onSaveCreate"/>
-            </beginButton>
-
-            <endButton>
-                <Button text="Cancel" press="onCancelCreate"/>
-            </endButton>
-        </Dialog>
-
-        <!-- EDIT Dialog -->
-        <Dialog id="editDialog" title="Edit Student">
-            <VBox class="sapUiSmallMargin">
-                <Input id="editName" placeholder="Name"/>
-                <Input id="editCourse" placeholder="Course"/>
-            </VBox>
-
-            <beginButton>
-                <Button text="Save" press="onSaveEdit"/>
-            </beginButton>
-
-            <endButton>
-                <Button text="Cancel" press="onCancelEdit"/>
-            </endButton>
-        </Dialog>
-
     </Page>
 
 </mvc:View>

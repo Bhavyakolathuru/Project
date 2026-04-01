@@ -1,5 +1,6 @@
 {
   "_version": "1.83.0",
+
   "sap.app": {
     "id": "project1",
     "type": "application",
@@ -79,10 +80,12 @@
 
       "targets": {
         "login": {
-          "viewName": "Login"
+          "viewName": "Login",
+          "viewId": "login"
         },
         "dashboard": {
-          "viewName": "Dashboard"
+          "viewName": "Dashboard",
+          "viewId": "dashboard"
         }
       }
     },

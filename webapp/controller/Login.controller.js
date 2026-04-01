@@ -25,7 +25,7 @@ sap.ui.define([
                 // 👉 Navigate to Dashboard
                 var oRouter = this.getOwnerComponent().getRouter();
                 oRouter.navTo("dashboard");
-
+                
             } else {
                 MessageToast.show("Invalid Username or Password ❌");
             }

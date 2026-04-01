@@ -1,12 +1,12 @@
-/* Background Image */
+/* ================= LOGIN PAGE ================= */
+
+/* Full page */
 .loginPage {
     height: 100%;
-    background-image:url(../images/login_bg.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: #f5f7fa;
 }
-/* Center container */
+
+/* Center content */
 .loginContainer {
     height: 100%;
     display: flex;
@@ -14,22 +14,19 @@
     align-items: center;
 }
 
-/* Login box (glass effect style) */
+/* Login box */
 .loginBox {
-    width: 320px;
-    padding: 30px;
+    width: 300px;
+    padding: 25px;
     border-radius: 12px;
-
-    background: rgba(255, 255, 255, 0.85); /* transparent white */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-
-    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Title */
 .loginTitle {
-    margin-bottom: 20px;
-    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
 }
 
 /* Inputs */
@@ -40,10 +37,53 @@
 /* Button */
 .loginButton {
     margin-top: 10px;
-    width: 100%;
 }
 
-/* Optional: Hover effect for button */
-.loginButton:hover {
-    opacity: 0.9;
+/* Image */
+.loginImage {
+    margin-bottom: 20px;
+    border: 3px solid #007aff;
+    padding: 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+
+/* ================= DASHBOARD (EMPLOYEE FORM) ================= */
+
+/* Container */
+.empContainer {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Form box */
+.empBox {
+    padding: 25px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Title */
+.empTitle {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Each row (HBox spacing) */
+.empRow {
+    margin-bottom: 12px;
+}
+
+/* Button */
+.empButton {
+    margin-top: 15px;
+    width: 120px;
+}
+
+/* Optional: input spacing (if needed) */
+.empInput {
+    margin-left: 10px;
 }
